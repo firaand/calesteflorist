@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALESTE FLORIST Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        .hero-bg {
+            background-image: url('https://i.pinimg.com/originals/76/e0/61/76e0617f288333d2c45d92c5123149d0.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-control-prev {
+            left: 10px;
+        }
+        .carousel-control-next {
+            right: 10px;
+        }
+        .img-container {
+            height: 300px;
+            overflow: hidden;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-pink-50 font-montserrat">
+    <div class="bg-pink-50 min-h-screen flex flex-col items-center">
+        <!-- Header -->
+        <header class="w-full bg-pink-100 shadow-md">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                <div class="text-3xl font-great-vibes text-pink-600">
+                    <a href="#">
+                        CALESTE FLORIST
+                    </a>
+                </div>
+                <nav class="space-x-4">
+                    <a class="text-pink-700 hover:text-pink-500" href="#home">Home</a>
+                    <a class="text-pink-700 hover:text-pink-500" href="#about">About</a>
+                    <a class="text-pink-700 hover:text-pink-500" href="#products">Products</a>
+                    <a class="text-pink-700 hover:text-pink-500" href="#custom-products">Custom Products</a>
+                    <a class="text-pink-700 hover:text-pink-500" href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <!-- Hero Section -->
+        <section class="w-full hero-bg fade-in" id="home">
+            <div class="hero-overlay">
+                <h1 class="text-6xl font-great-vibes drop-shadow-lg">CALESTE FLORIST</h1>
+                <p class="text-3xl mt-4 drop-shadow-lg">Fresh &amp; Beautiful Flowers</p>
+                <p class="mt-2 drop-shadow-lg max-w-2xl">
+                    We are here to bring the beauty of flowers to your every special moment. Each arrangement is a work of art crafted with love and care. We understand that every flower has a story, and we are ready to help you express it.
+                </p>
+                <a class="mt-6 bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300" href="https://www.instagram.com/calesteflorist?igsh=MXJ5aG56ZXNkbms0Yw%3D%3D&utm_source=qr">Shop Now</a>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section class="w-full bg-pink-100 py-20 scroll-animation" id="about">
+            <div class="container mx-auto flex flex-col items-center text-center">
+                <h2 class="text-5xl font-great-vibes text-pink-700">About Us</h2>
+                <div class="flex flex-col md:flex-row mt-10 items-center justify-center space-y-10 md:space-y-0 md:space-x-4">
+                    <div class="w-full md:w-1/2 px-4 img-container">
+                        <img alt="Best Flower Sellers" class="rounded-lg shadow-md mx-auto" src="https://i.pinimg.com/originals/e9/b3/7d/e9b37d60b3f0eb3b0bc6a5aa5d0d2086.jpg"/>
+                    </div>
+                    <div class="w-full md:w-1/2 text-left px-4">
+                        <h3 class="text-3xl font-great-vibes text-pink-700 mt-10 md:mt-0">Why Choose Us?</h3>
+                        <p class="text-pink-600 mt-4">
+                            - Freshness in Every Petal: Our flowers are carefully handpicked from the best local farmers to ensure maximum freshness and beauty.
+                            <br>
+                            - Exclusive Range: Do you want to surprise a loved one, celebrate happiness, or enhance the ambiance? We have specially designed flower arrangements for all occasions.
+                            <br>
+                            - Lightning Delivery, Instant Smile: Deliver happiness in a matter of hours with our super-fast delivery service. You can rest assured that your flowers will arrive in your recipient's hands in perfect condition.
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Products Section -->
+        <section class="w-full bg-pink-50 py-20 scroll-animation" id="products">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-great-vibes text-pink-700 text-center">Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Flower Pot 1" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/f0/89/9d/f0899d70109ac31ed7b78b003b03babd.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">DAISY</h3>
+                        <p class="text-pink-600">Rp. 8.000 / tangkai</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Flower Pot 2" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/16/60/a2/1660a218d604482c3836576856edf7f5.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">ROSE</h3>
+                        <p class="text-pink-600">Rp. 5.000 / tangkai</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Flower Pot 3" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/b7/71/60/b77160104c4911757b872a45742defb8.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">LILY</h3>
+                        <p class="text-pink-600">Rp. 15.000 / tangkai</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Flower Pot 4" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/f3/07/51/f307515334c7e03525a0b8899eb7d64a.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">TULIP</h3>
+                        <p class="text-pink-600">Rp. 35.000 / tangkai</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Flower Pot 5" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/93/63/ab/9363abab8406b6c8ef81ad817c8f677b.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">BABY BREATH</h3>
+                        <p class="text-pink-600">Rp.25.000 / tangkai</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Flower Pot 6" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/97/1b/78/971b7806c5d53f1de7f4093bbbd8693e.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">PEONY</h3>
+                        <p class="text-pink-600">Rp. 20.000 / tangkai</p>
+                    </div>
+                </div>
+                <div class="mt-10 text-center">
+                    <div class="img-container">
+                        <img alt="More Products" class="w-full h-48 object-cover rounded-lg" src="https://i.pinimg.com/originals/3a/73/b9/3a73b9e4da446c8497076efe2a66a66f.jpg"/>
+                    </div>
+                    <a class="mt-6 bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300 inline-block" href="https://www.instagram.com/calesteflorist?igsh=MXJ5aG56ZXNkbms0Yw%3D%3D&utm_source=qr">See More</a>
+                    <a class="mt-6 bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300 inline-block" href="https://wa.me/+6281939803616">Order</a>
+                </div>
+            </div>
+        </section>
+        <!-- Custom Products Section -->
+        <section class="w-full bg-pink-100 py-20 scroll-animation" id="custom-products">
+            <div class="container mx-auto">
+                <h2 class="text-5xl font-great-vibes text-pink-700 text-center">Custom Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Custom Flower Arrangement" class="w-full h-64 object-cover rounded-lg" src="https://i.pinimg.com/originals/6a/f1/13/6af11318742eac082a80b4e92f6a0ee2.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">Custom Flower Arrangement</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Custom Flower Bouquet" class="w-full h-64 object-cover rounded-lg" src="https://i.pinimg.com/originals/00/27/c3/0027c3ba47e39dc1b3ceb8da97565c7b.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">Custom Flower Bouquet</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="img-container">
+                            <img alt="Custom Flower Basket" class="w-full h-64 object-cover rounded-lg" src="https://i.pinimg.com/originals/b7/da/fc/b7dafcdbae9315bde5461dbbfd384443.jpg"/>
+                        </div>
+                        <h3 class="text-2xl font-great-vibes text-pink-700 mt-4">Custom Flower Basket</h3>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <h3 class="text-4xl font-great-vibes text-pink-700 text-center">Custom Order Form</h3>
+                    <form class="mt-6 max-w-lg mx-auto">
+                        <div class="flex flex-col space-y-4">
+                            <input class="p-2 border border-pink-300 rounded-lg" placeholder="Your Name" type="text"/>
+                            <input class="p-2 border border-pink-300 rounded-lg" placeholder="Your Email" type="email"/>
+                            <input class="p-2 border border-pink-300 rounded-lg" placeholder="Product Type (e.g., Arrangement, Bouquet, Basket)" type="text"/>
+                            <textarea class="p-2 border border-pink-300 rounded-lg" placeholder="Custom Details" rows="4"></textarea>
+                            <a class="bg-pink-500 text-white py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300 text-center" href="https://wa.me/+6281939803616">Order Now</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="w-full bg-pink-50 py-20 scroll-animation" id="contact">
+            <div class="container mx-auto text-center">
+                <h2 class="text-5xl font-great-vibes text-pink-700">Contact Us</h2>
+                <p class="text-pink-600 mt-4">If you have any questions, feel free to reach out to us!</p>
+                <div class="mt-10 space-x-4">
+                    <a class="text-pink-700 hover:text-pink-500" href="https://wa.me/+6281939803616"><i class="fab fa-whatsapp"></i></a>
+                    <a class="text-pink-700 hover:text-pink-500" href="https://x.com/ntfemf?s=21"><i class="fab fa-twitter"></i></a>
+                    <a class="text-pink-700 hover:text-pink-500" href="https://www.instagram.com/calesteflorist?igsh=MXJ5aG56ZXNkbms0Yw%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+            const displayScrollElement = (element) => {
+                element.classList.add('visible');
+            };
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = 'translateX(${100 * (i - index)}%)';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
